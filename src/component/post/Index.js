@@ -12,8 +12,12 @@ class Post extends Component {
 
   componentDidMount() {
     fetch('http://jsonplaceholder.typicode.com/posts')
-    .then(res => res.json())
+      .then(res => {
+        console.log(111, res);
+        return res.json()
+      })
       .then(post => {
+        console.log(222, post);
         this.setState({
           postData: post
         });
@@ -21,8 +25,8 @@ class Post extends Component {
   }
 
   render() {
-    const { postData } = this.state;
-    const postItem = postData.map(post=>(
+    const {postData} = this.state;
+    const postItem = postData.map(post => (
       <div key={post.id}>
         <h3>{post.title}</h3>
         <p>{post.body}</p>
