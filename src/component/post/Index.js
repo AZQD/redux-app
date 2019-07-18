@@ -1,31 +1,15 @@
 import React, {Component} from 'react';
-// import axios from 'axios';
-import {fetch} from 'whatwg-fetch'
+import {fetchPost} from '../../actions/actions'
+import {connect} from 'react-redux'
 
 class Post extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      postData: []
-    }
-  }
 
   componentDidMount() {
-    fetch('http://jsonplaceholder.typicode.com/posts')
-      .then(res => {
-        console.log(111, res);
-        return res.json()
-      })
-      .then(post => {
-        console.log(222, post);
-        this.setState({
-          postData: post
-        });
-      });
+    this.props.fetchPost();
   }
 
   render() {
-    const {postData} = this.state;
+    const postData = this.props.postData;
     const postItem = postData.map(post => (
       <div key={post.id}>
         <h3>{post.title}</h3>
@@ -40,4 +24,10 @@ class Post extends Component {
   }
 }
 
-export default Post;
+const mapStateToProps = state => {
+  return {
+    postData: state.postReducer.postData
+  }
+};
+
+export default connect(mapStateToProps, {fetchPost})(Post);

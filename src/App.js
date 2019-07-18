@@ -1,23 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import {Provider} from 'react-redux';
-import {createStore, applyMiddleware, compose} from 'redux';
-import thunk from 'redux-thunk';
 
 import './App.css';
 
 import Post from './component/post/Index.js';
-
-const middleware = [thunk];
-const initState = {};
-const store = createStore(
-  ()=>{},
-  initState,
-  compose(
-    applyMiddleware(...middleware),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-  )
-);
+import store from './store.js';
 
 class App extends Component {
   render() {
