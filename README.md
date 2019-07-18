@@ -1,3 +1,13 @@
+# redux-app
+
+1.res => res.json()：//将数据转换成promise可返回的json
+  参考：https://blog.csdn.net/qq_36529459/article/details/80374756
+  官方说明文档：https://developer.mozilla.org/zh-CN/docs/Web/API/Body/json
+  
+2.ajax、fetch、axios区别:
+  https://blog.csdn.net/jennyya/article/details/83687622
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
