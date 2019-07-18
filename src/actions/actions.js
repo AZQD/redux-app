@@ -1,3 +1,5 @@
+import * as constObj from '../constant';
+
 export const fetchPost = () => dispatch => {
   fetch('http://jsonplaceholder.typicode.com/posts')
     .then(res => {
@@ -5,7 +7,7 @@ export const fetchPost = () => dispatch => {
     })
     .then(postData => {
       dispatch({
-        type: 'FETCH_POST',
+        type: constObj.FETCH_POST,
         payload: postData
       });
     });
@@ -22,7 +24,7 @@ export const addItem = (addData) => dispatch => {
     .then(res => res.json())
     .then(post => {
       dispatch({
-        type: 'ADD_POST',
+        type: constObj.ADD_POST,
         payload: post
       });
     });

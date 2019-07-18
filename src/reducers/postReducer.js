@@ -1,3 +1,5 @@
+import * as constObj from '../constant';
+
 const initState = {
   postData: [],
   addData: {}
@@ -5,12 +7,12 @@ const initState = {
 
 export default function (state = initState, action) {
   switch (action.type) {
-    case 'FETCH_POST':
+    case constObj.FETCH_POST:
       return {
         ...state,
         postData: action.payload
       };
-    case 'ADD_POST':
+    case constObj.ADD_POST:
       return {
         ...state,
         addData: action.payload
