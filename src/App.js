@@ -5,6 +5,7 @@ import {Provider} from 'react-redux';
 import './App.css';
 
 import Post from './component/post/Index.js';
+import Add from './component/add/Index.js';
 import store from './store.js';
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
             <h2>Welcome to React</h2>
           </div>
 
+          <Add />
           <Post />
         </div>
       </Provider>

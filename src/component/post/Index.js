@@ -8,10 +8,15 @@ class Post extends Component {
     this.props.fetchPost();
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.props.postData.unshift(nextProps.addData);
+  }
+
   render() {
     const postData = this.props.postData;
-    const postItem = postData.map(post => (
-      <div key={post.id}>
+    console.log('postData', postData);
+    const postItem = postData.map((post, index) => (
+      <div key={index}>
         <h3>{post.title}</h3>
         <p>{post.body}</p>
       </div>
@@ -26,7 +31,8 @@ class Post extends Component {
 
 const mapStateToProps = state => {
   return {
-    postData: state.postReducer.postData
+    postData: state.postReducer.postData,
+    addData: state.postReducer.addData
   }
 };
 

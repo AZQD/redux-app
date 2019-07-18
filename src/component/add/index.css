@@ -1,0 +1,9 @@
+.addBox{
+  margin-top: 20px;
+}
+input{
+  border: 1px solid red;
+  background-color: pink;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+}

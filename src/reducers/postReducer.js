@@ -1,6 +1,7 @@
 
 const initState = {
-  postData: []
+  postData: [],
+  addData: {}
 };
 
 export default function (state = initState, action) {
@@ -9,6 +10,11 @@ export default function (state = initState, action) {
       return{
         ...state,
         postData: action.payload
+      };
+    case 'ADD_POST':
+      return{
+        ...state,
+        addData: action.payload
       };
     default:
       return state
