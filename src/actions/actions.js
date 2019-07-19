@@ -10,6 +10,10 @@ export const fetchPost = () => dispatch => {
         type: constObj.FETCH_POST,
         payload: postData
       });
+      dispatch({
+        type: constObj.CHANGE_SELECT,
+        payload: postData.slice(0, 3)
+      });
     });
 };
 

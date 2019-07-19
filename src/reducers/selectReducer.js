@@ -1,7 +1,7 @@
 import * as constObj from '../constant';
 
 const initState = {
-  selectArr: [1, 2, 3],
+  selectArr: [],
   selected: 0,
 };
 
@@ -11,6 +11,11 @@ export default function (state = initState, action) {
       return {
         ...state,
         selected: action.payload
+      };
+    case constObj.CHANGE_SELECT:
+      return {
+        ...state,
+        selectArr: action.payload
       };
     default:
       return state

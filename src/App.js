@@ -9,6 +9,10 @@ import Add from './component/add/Index.js';
 import Select from './component/select/Index.js';
 import store from './store.js';
 
+store.subscribe(()=>{
+  console.log('监听：store.getState()', store.getState());
+});
+
 class App extends Component {
   render() {
     return (
