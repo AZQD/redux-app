@@ -8,6 +8,10 @@ redux学习参考[阮一峰老师文章](http://www.ruanyifeng.com/blog/2016/09/
   
 2.ajax、fetch、axios区别:
   https://blog.csdn.net/jennyya/article/details/83687622
+  
+3.redux中state已经更新，但是并没有render的坑：
+数据需要深复制：
+参考文件：/redux-app/src/reducers/postReducer.js
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
