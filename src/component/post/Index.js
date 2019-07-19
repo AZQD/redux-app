@@ -9,7 +9,7 @@ class Post extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.props.postData.unshift(nextProps.addData);
+    // this.props.postData.unshift(nextProps.addData);
   }
 
   render() {
