@@ -29,3 +29,10 @@ export const addItem = (addData) => dispatch => {
       });
     });
 };
+
+export const selectItemFun = (index) => dispatch => {
+  dispatch({
+    type: constObj.SELECT_ITEM,
+    payload: index
+  });
+};
