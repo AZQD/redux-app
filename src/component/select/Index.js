@@ -5,7 +5,7 @@ import './index.css';
 
 class Select extends Component {
 
-  selectItemFun = (index)=> {
+  selectItemFun = (index) => {
     this.props.selectItemFun(index);
   };
 
@@ -14,7 +14,8 @@ class Select extends Component {
       <div className='selectBox'>
         {
           this.props.postData.slice(0, 3).map((item, index) =>
-            <div onClick={() => this.selectItemFun(index)} className={`selectItem ${this.props.selected === index}`} key={index}>{item.body}</div>
+            <div onClick={() => this.selectItemFun(index)} className={`selectItem ${this.props.selected === index}`}
+                 key={index}>{item.body}</div>
           )
         }
       </div>
