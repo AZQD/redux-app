@@ -3,13 +3,16 @@
 redux学习参考[阮一峰老师文章](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_two_async_operations.html)
 
 1.res => res.json()：//将数据转换成promise可返回的json
+
   参考：https://blog.csdn.net/qq_36529459/article/details/80374756
   官方说明文档：https://developer.mozilla.org/zh-CN/docs/Web/API/Body/json
   
 2.ajax、fetch、axios区别:
+
   https://blog.csdn.net/jennyya/article/details/83687622
   
 3.redux中state已经更新，但是并没有render的坑：
+
 数据需要深复制：
 参考文件：/redux-app/src/reducers/postReducer.js
 
